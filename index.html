@@ -1,52 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Gapminder Offline export</title>
-    <link href="libs/vizabi.css" rel="stylesheet" type="text/css" >
-    <link href="libs/bubblechart.css" rel="stylesheet" type="text/css">
-    <link href="libs/bubblemap.css" rel="stylesheet" type="text/css">
-    <link href="libs/mountainchart.css" rel="stylesheet" type="text/css">
-    <link href="libs/barrankchart.css" rel="stylesheet" type="text/css">
-    <link href="libs/linechart.css" rel="stylesheet" type="text/css">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="libs/d3.js"></script>
-    <script src="libs/vizabi.js"></script>
-    <script src="libs/bubblechart.js"></script>
-    <script src="libs/bubblemap.js"></script>
-    <script src="libs/mountainchart.js"></script>
-    <script src="libs/barrankchart.js"></script>
-    <script src="libs/linechart.js"></script>
-    <script src="libs/vizabi-ddfcsv-reader.js"></script>
-    <script src="libs/vizabi-csv-reader.js"></script>
-    <script src="libs/vizabi-excel-reader.js"></script>
-  </head>
+	<title>Laura Ham | Technopreneur</title>
 
-  <body align= "justify", style="width: 90%; margin: 0 auto; font-family: 'Arial';">
-    <h1 align= "center", style="max-width: 900px; height: 100%; margin: 0 auto; font-family: 'Arial';">Visualization of Environmental Impact of Diets</h1>
-
-    <h3 style="max-width: 900px; height: 100%; margin: 0 auto; font-family: 'Arial';"><br>How to Use</h3>
-    <p style="max-width: 900px; height: 100%; margin: 0 auto; font-family: 'Arial';">This visualization shows the environmental impact of five different diet types, as well as from all countries. This visualization aims for data exploration of the dilemma in food choice between health and carbon footprint. The data represented on the axes, and the color and size of the data points can be adjusted to the information sources you wish to explore. You can select and deselect data points (for example countries or diet types) in the list at the right of the visualization to follow these data points over time. Press the Play button in the bottom left corner to start time to play, and the selected datapoints will stay highlighted and leave a trace throughout the simulation. For example, relations between food intake of different food categories can be compared with the carbon footprint. You can enlarge the visualization to full screen by pressing the 'Expland' button in the bottom right corner.</p>
-    
-    <h3 style="max-width: 900px; height: 100%; margin: 0 auto; font-family: 'Arial';"><br>Interpretation</h3>
-    <p style="max-width: 900px; height: 100%; margin: 0 auto; font-family: 'Arial';">The emission values are always in grams per person per day, the food supply is in kilocalories per person per day for the selected food category or total daily supply or emision. By default, the datapoints are both countries and the five identified diet types. The colors of these countries datapoints are set to the meat supply in kcal per person per day, but this can be changed in the upper right corner.</p>
-    <p style="max-width: 900px; height: 100%;; margin: 0 auto; font-family: 'Arial';">Note that this visualization shows the food supply, not the food intake. To compare, the average food supply is 3900 kcal per person per day in the US, while the average food intake is around 2600 kcal per person per day on average in the US.</p>
-
-
-    <h3 style="max-width: 900px; height: 100%; margin: 0 auto; font-family: 'Arial';"><br>Background and Data Sources</h3>
-    <p style="max-width: 900px; height: 100%; margin: 0 auto; font-family: 'Arial';">This visualization is made by Laura Ham for the course Explorative Information Visualization. The data is taken from the 'Shrink Our Footprint' website, UN Food and Agricultural Organization (FAO), and Gapminder. I gathered multiple datasets, aggregated and munipulated (calculations) different datasources which led to the right data sources to be used for this visualization. The open source tool Gapminder is used as tool to visualize this data. For more information, <a href="https://github.com/laura-ham">contact me</a>. </p>
-    <div id="placeholder" style="width: 100%; max-width: 1500px; height: 900px;margin: 0 auto; font-family: 'Arial';"></div>
-
-    <script src="config.js"></script>
-    <script>
-
-      var ddfcsvReader = new DDFCsvReader.getDDFCsvReaderObject();
-      Vizabi.Reader.extend("ddf", ddfcsvReader);
-      Vizabi.Reader.extend("ext-csv", CsvReader.csvReaderObject);
-      Vizabi.Reader.extend("excel", ExcelReader.excelReaderObject);
-
-      var viz = Vizabi('BubbleChart', document.getElementById('placeholder'), CONFIG);
-
-    </script>
-  </body>
+	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/themes/red-white.css">
+	<!-- <link rel="stylesheet" href="css/themes/green-white.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/indigo-white.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/grey-white.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/white-indigo.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/white-blue.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/white-grey.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/white-red.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/yellow-black.css"> -->
+</head>
+<body>
+	<main>
+		<div class="intro">Hello, I'm Laura!</div>
+		<div class="tagline">Entrepreneur | DX Developer | Tech enthousiast | Curious Mind | Adventurous </div>
+		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
+		<div class="icons-social">
+			<a target="_blank" href="https://github.com/laura-ham"><i class="fab fa-github"></i></a>
+			<a target="_blank" href="https://twitter.com/laura_hamham"><i class="fab fa-twitter"></i></a>
+			<a target="_blank" href="https://www.linkedin.com/in/laura-ham"><i class="fab fa-linkedin"></i></a>
+			<a target="_blank" href="https://medium.com/@lauraham96"><i class="fab fa-medium"></i></a>
+		</div>
+		<div class="project">
+			<a href="https://laura-ham.github.io/Chaos/index.html">Chaos Game Theory Visualization</a>
+		</div>
+		<div class="project">
+			<a href="https://laura-ham.github.io/Aalto-EIV/index.html">Aalto Food Dilemma Visualization</a>
+		</div>
+	</main>
+</body>
 </html>
